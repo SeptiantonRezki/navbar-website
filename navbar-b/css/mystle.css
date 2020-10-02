@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Sansita+Swashed:wght@800&display=swap');
+/* ============================================ */
+
+/* Name Font Used In This Tutorial */
+
+/*  
+    font-family: 'Sansita Swashed', cursive;
+    font-family: 'Playfair Display', serif;
+*/
+
+/* =========================================== */
+
+/* ======================== */
+
+/* GENERAL STYLE */
+
+/* ======================= */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+/* =========================== */
+
+/* LIST COLOR USED IN THIS TUTORIAL */
+
+/* ========================= */
+
+:root {
+    /* background color*/
+    --main-bg-color-button: #f8f8f8;
+    --main-bg-color-button-hover: #f0f0f0;
+    --main-bg-color-notFocus-and-hover-menu-item: rgba(0, 0, 0, 0.5);
+    /* color font */
+    --main-font-color-menu-list-item: #030303;
+    --main-font-color-icon-button-and-bell: #333;
+    --main-font-color-icon-button-and-bell: #606066;
+    /* border color*/
+    --main-b-color-button: #d3d3d3;
+    --main-b-color-border: rgba(0, 0, 0, 0.1);
+    /* box shadow */
+    --main-bs-color-hover-button: rgba(0, 0, 0, 0.1);
+}
+
+/* ok lets do this */
+
+navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0px 3%;
+}
+
+navbar .containerForIconNavbar {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+navbar .containerForSearchNavbar {
+    flex: 4;
+    height: 100%;
+}
+
+navbar .containerForProfileAndNotificationNavbar {
+    flex: 3;
+    height: 100%;
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+navbar .containerForIconNavbar .cotainerIconNavbar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerForSearchNavbar .formStyle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.inputSearchStyle {
+    flex: 1;
+    height: 35px;
+    outline: none;
+    border: 1px solid var(--main-b-color-button);
+    padding: 0px 8px;
+    border-radius: 2px;
+}
+
+.btnSearchStyle {
+    width: 61px;
+    height: 35px;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid var(--main-b-color-button);
+    cursor: pointer;
+}
+
+.btnSearchStyle:hover {
+    border: 1px solid var(--main-bs-color-hover-button);
+    box-shadow: 0 1px 0 var(--main-bs-color-hover-button);
+    background-color: var(--main-bg-color-button-hover);
+}
+
+/* ============================= */
+/* NAVBAR STYLE SLIDE */
+/* ================================ */
+.containerFullNavbarSlide {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background: var(--main-bg-color-notFocus-and-hover-menu-item);
+    display: none;
+    transition: 1.5s;
+
+}
+
+.containerNavbarSlide {
+    overflow-y: scroll;
+    width: 230px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    left: -100%;
+    padding-bottom: 40px;
+    transition: 1.5s;
+}
+
+.containerTitleWebsite {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.cotainerIconNavbarSlide {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgb(237, 234, 234);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 5px;
+}
+
+.myTitleFont {
+    height: 40px;
+    line-height: 40px;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.containerListItemMenuNavbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.titleMenuNavbar {
+    letter-spacing: .007px;
+    padding: 20px 30px 5px 30px;
+    color: #606066;
+    /* color: rgb(89, 89, 89); */
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.styleIconMenuItem {
+    color: rgb(89, 89, 89);
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.menuItemNavbar {
+    display: flex;
+    text-decoration: none;
+    color: #030303;
+    padding: 15px 30px;
+    font-family: 'Playfair Display', serif;
+    align-items: center;
+}
+
+.menuItemNavbar:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
